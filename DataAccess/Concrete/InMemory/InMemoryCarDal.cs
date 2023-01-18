@@ -18,12 +18,12 @@ namespace DataAccess.Concrete
         {
             _cars = new List<Car>
             {
-               new Car {Id =1, BrandId =1, ColorId =1, ModelYear = "2022", DailyPrice = 450000, Description = "Volkswagen Jetta 1.6 Primeline"},
-               new Car {Id =2, BrandId =2, ColorId =2, ModelYear ="2015", DailyPrice = 350000, Description = "Toyota Corolla 1.6 "},
-               new Car {Id =3, BrandId =1, ColorId =3, ModelYear = "2019", DailyPrice = 370000, Description = "Skoda Octavia 1.6 Elite e-Tec"},
-               new Car {Id =4, BrandId =2, ColorId =2, ModelYear = "2023", DailyPrice = 650000, Description = "Skoda Octavia 1.6 TDI"},
-               new Car {Id =5, BrandId =3, ColorId =1, ModelYear = "2021", DailyPrice = 380000, Description = "Volkswagen Jetta 2.0 Comfortline"},
-               new Car {Id =6, BrandId =3, ColorId =3, ModelYear = "2018", DailyPrice = 360000, Description = "Porsche Cayenne"},
+               new Car {Id =1, BrandId =1, ColorId =1, CarName="Volkswagen", ModelYear = "2022", DailyPrice = 450000, Description = "Volkswagen Jetta 1.6 Primeline"},
+               new Car {Id =2, BrandId =2, ColorId =2, CarName="Toyota",ModelYear ="2015", DailyPrice = 350000, Description = "Toyota Corolla 1.6 "},
+               new Car {Id =3, BrandId =1, ColorId =3, CarName="Skoda", ModelYear = "2019", DailyPrice = 370000, Description = "Skoda Octavia 1.6 Elite e-Tec"},
+               new Car {Id =4, BrandId =2, ColorId =2, CarName="Skoda",ModelYear = "2023", DailyPrice = 650000, Description = "Skoda Octavia 1.6 TDI"},
+               new Car {Id =5, BrandId =3, ColorId =1, CarName="Volkswagen", ModelYear = "2021", DailyPrice = 380000, Description = "Volkswagen Jetta 2.0 Comfortline"},
+               new Car {Id =6, BrandId =3, ColorId =3, CarName="Porsche", ModelYear = "2018", DailyPrice = 360000, Description = "Porsche Cayenne"},
             };
 
 

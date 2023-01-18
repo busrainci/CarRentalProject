@@ -1,7 +1,7 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete;
 using Entities.Concrete;
-
+using Microsoft.Identity.Client;
 
 public class Program
 {
@@ -27,7 +27,20 @@ public class Program
 
         foreach (var car in carManager.GetAll())
         {
-            Console.WriteLine(car.CarName);
+            if (car.DailyPrice>0 && car.CarName.Length >2)
+            {
+                Console.WriteLine(car.CarName);
+            }
+            else
+            {
+                Console.WriteLine("ürün bulunamadı.");
+            }
+
+            
         }
+
+
+
+       
     }
 }

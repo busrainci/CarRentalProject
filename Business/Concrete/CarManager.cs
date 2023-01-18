@@ -25,10 +25,15 @@ namespace Business.Concrete
             return _carDal.GetAll();
         }
 
-      ////  public List<Car> GetByCarName(string min, string max)
-      //  {
-      //      return _carDal.GetAll(c => c.CarName >= min && c.CarName <= max);
-      //  }
+        public List<Car> GetByCarName(int CarNameLength) 
+       {
+            return _carDal.GetAll(c => c.CarName.Length >= 2);
+       }
+
+        public List<Car> GetByCarName(string carNameLength)
+        {
+            throw new NotImplementedException();
+        }
 
         public List<Car> GetByDailyPrice(decimal min, decimal max)
         {
