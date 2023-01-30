@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <Compile Remove="Absract\**" />
+    <EmbeddedResource Remove="Absract\**" />
+    <None Remove="Absract\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Absract\" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>

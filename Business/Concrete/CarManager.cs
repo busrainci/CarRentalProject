@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constans;
+using Core.Utilities.Results;
 using DataAccess.Absract;
 using Entities.Concrete;
 using Entities.DTOs;
@@ -19,7 +21,7 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
-        public void Add(Car car)
+        public IResult Add(Car car)
         {
             if (car.Description.Length >= 2 && car.DailyPrice>0)
             {
@@ -30,9 +32,11 @@ namespace Business.Concrete
             {
                 Console.WriteLine("araç eklenmedi,lütfen araç ismini ve günlük fiyatını kontrol ediniz.");
             }
+            _carDal.Add(car);
+            return new SuccessDataResult<Car>(Messages.CarAdded);
         }
 
-        public void Delete(Car car)
+        public IResult Delete(Car car)
         {
             _carDal.Delete(car);
             Console.WriteLine("{0} isimli araba listeden kaldırılmıştır.",car.CarName);
@@ -89,6 +93,7 @@ namespace Business.Concrete
                 Console.WriteLine("{0} isimli araba güncellenemedi! lütfen arabann ismini ve günlük fiyatını kontrol ediniz.",car.CarName);
             }
         }
+         
     }
 }
 
