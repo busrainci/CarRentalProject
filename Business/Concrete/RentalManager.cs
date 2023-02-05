@@ -20,10 +20,7 @@ namespace Business.Concrete
             _rentalDal = rentalDal;
         }
 
-        public static object GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public IResult Add(Rental rental)
         {

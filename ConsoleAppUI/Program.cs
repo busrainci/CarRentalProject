@@ -15,12 +15,15 @@ public class Program
     {
         //CustomerTest();
         RentalTest();
+
     }
+
     private static void CustomerTest()
     {
         CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
-        customerManager.Add(new Customer {UserId = 3, CustomerId= 4, CompanyName = "Kaçkar A.Ş"});
+        customerManager.Add(new Customer { UserId = 3, CustomerId = 4, CompanyName = "Kaçkar A.Ş" });
     }
+
     private static void RentalTest()
     {
         RentalManager rentalManager = new RentalManager(new EfRentalDal());
@@ -35,6 +38,7 @@ public class Program
 
         Console.WriteLine(result.Message);
     }
+
 
 }
 
