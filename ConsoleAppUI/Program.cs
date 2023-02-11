@@ -29,7 +29,7 @@ public class Program
         RentalManager rentalManager = new RentalManager(new EfRentalDal());
         var result = rentalManager.Add(new Rental
         {
-            Id = 5,
+            RentalId = 5,
             CarId = 2,
             CustomerId = 3,
             RentDate = new DateTime(2023, 01, 25),

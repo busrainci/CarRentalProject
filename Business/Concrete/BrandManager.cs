@@ -1,11 +1,14 @@
 ﻿using Business.Abstract;
 using Business.Constans;
+using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Absract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,6 +26,7 @@ namespace Business.Concrete
 
         public IResult Add(Brand brand)
         {
+           
             _brandDal.Add(brand);
             return new SuccessResult(Messages.BrandAdded);  
         }
